@@ -389,18 +389,75 @@
                 </li>
             </ul>
             </div>
-          </div>    
+          <!--Рассылка використання елементів форм-->
+              <div class="container-subscribe">
+              <form class="form-footer" autocomplete="off">
+              <h2 class="dispatch-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h2>
+              <div class="subscribe-up">
+                  <label class="subscribe-label">
+                      <input class="subscribe-input" type="email" placeholder="E-mail" name="email"/>
+                  </label>
+                  <button class="btn-subscription" type="submit">Подписаться
+                      <svg class="icon-send" width="24" height="24">
+                          <use href="./images/icons.svg#icon-send"></use>
+                      </svg>
+                  </button>
+                  </div>
+              </form>   
+          </div>
+        </div>    
       </footer>
       <!--Модальне вікно для для кнопки Заказать услугу-->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal" >
-       <p hidden>
-           Lorem ipsum
-       </p>
-       <svg class="icon-modalsvg" width="18" height="18">
-           <use href="./images/хрестик (1).svg"></use>
-       </svg>
-       <button  class="modal-btn" data-modal-close type="button">x</button>
+       <form class="js-speaker-form" autocomplete="off">
+        <p class="modal-text">Оставьте свои данные, мы вам перезвоним
+        </p>
+           <label class="label-field">Имя</label>
+           <div class="container-fieldmod">
+           <input  class="input-field" type="text" name="name" placeholder=""/>
+           <svg class="modicon" width="12" height="12">
+            <use href="./images/icons.svg#icon-personmod"></use>
+        </svg>
+    </input>
+           </div>
+           <label class="label-field">Телефон</label>
+           <div class="container-fieldmod">
+            <input class="input-field" type="tel" name="tel" placeholder=""/>
+            <svg class="modicon" width="12" height="12">
+             <use href="./images/icons.svg#icon-phonemod"></use>
+         </svg>
+     </input>
+    </div>
+    <label class="label-field">Почта</label>
+    <div class="container-fieldmod">
+           <input  class="input-field"type="tel" name="tel" placeholder=""/>
+           <svg class="modicon" width="12" height="12">
+           <use href="./images/icons.svg#icon-emailmod"></use>
+        </svg>
+    </input>
+</div>
+<label class="label-field">Комментарий</label>
+<div class="container-fieldmod">
+    <textarea class="comment-field" name="comment" rows="5" placeholder="Введите текст"></textarea>
+    </div>
+<label class="label-field checkbox-lable">
+    <input class="input-fiel" class="" type="checkbox" name="policy">
+    </input>
+    <svg class="modicons" width="16" height="15">
+        <use href="./images/icons.svg#icon-icon-check"></use>
+    </svg>
+    Соглашаюсь с рассылкой и принимаю
+      <a class="hero-form-link" href="">Условия договора</a>
+    </label>
+     <button class="close" type="submit">Отправить</button>
+       </form>
+
+       <button  class="modal-btn" data-modal-close type="button">
+        <svg class="icon-modalsvg" width="9" height="9">
+            <use href="./images/icons.svg#icon-cross"></use>
+        </svg>
+           </button>
     </div>
        </div>
       <!--подключение jS-->
