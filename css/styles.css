@@ -967,15 +967,16 @@ padding-bottom: 27px;
     right: 10px;
     border-radius: 50%;
     cursor: pointer;
+    fill: #212121;
     background-color: var(--white-text);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: border 250ms var(--animation), fill 250ms var(--animation), background-color 250ms var(--animation);
     
 }
-.modal-btn:hover {
+.modal-btn:hover, :focus {
     background-color: var(--white-text);
-    color:black;
+    fill: var(--accent-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 250ms var(--animation), background-color 250ms var(--animation);
 }
 /*Modalka ba{ckground 6 */
 .modal-text  
@@ -987,15 +988,13 @@ padding-bottom: 27px;
     line-height: 1.15;
     letter-spacing: 0.03em;
     text-align: center;
-    color: #212121;
-    
+    color: #212121;   
 }
 .label-field {
     display: flex;
     cursor: pointer;
     font-size: 12px;
 }
-
 .close  {
     display: flex;
     text-align: center;
@@ -1011,11 +1010,8 @@ position: relative;
 }
 .container-fieldmod {
     position: relative;
-
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 10px;
     margin: 0;
     border: 1px solid rgba(33, 33, 33, 0.2);
     box-sizing: border-box;
@@ -1023,19 +1019,18 @@ position: relative;
     transition: border-color 250ms var(--animation);
     margin-bottom: 4px;
 }
+.container-fieldmod:last-child {
+    margin-bottom: 0px;
+}
 
-.container-fieldmode input { margin: 0;
+.container-fieldmod input { margin: 0;
 padding: 11px;
 padding-left: 42px;
-border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
-border-radius: 4px; 
+border-radius: 4px;
+margin: 0px;
 
-transition: border 250ms var(--animation); }
-.container-fieldmode input:hover,
-.container-fieldmode input:focus {
-    border:  ;
-}
+transition: border-color 250ms var(--animation); }
 
 
 .label-field {
@@ -1050,6 +1045,19 @@ margin-bottom: 4px;
     border: none;
     cursor: pointer;
 }
+.input-field:hover, :focus {
+border-color: #2196F3;
+}
+.container-fieldmod:hover, :focus {
+border-color: #2196F3;
+}
+.input-field:hover + .modicon, 
+.input-field:focus + .modicon {
+  fill: var(--accent-color);
+}
+.input-field {
+    outline: none;
+}
 .modicon {
     position: absolute;
     top: 50%;
@@ -1060,15 +1068,18 @@ margin-bottom: 4px;
     height: 18px;
     transition: fill 250ms var(--animation);
 }
-.modicon:hover, .modicon:focus {
-    fill:var(--accent-color);
+
+.modicon:hover,:focus {
+    fill: var(--accent-color);
 }
+
 
 .comment-field {
   margin: 0px;
   resize: none;
   padding: 12px 16px;
   cursor: pointer;
+  border: 1px solid rgba(33, 33, 33, 0.2);
 }
 .input-fiel {
     position: absolute;
@@ -1098,7 +1109,7 @@ margin-bottom: 4px;
         margin-bottom: 30px;
     }
 .hero-form-link {
-    margin-left: 2px;
+    margin-left: 4px;
     color: var(--accent-color);
     text-decoration: underline;
     cursor: pointer;
@@ -1159,6 +1170,8 @@ position: relative;
     
 }
 .btn-subscription {
+    display: inline-flex;
+    align-items: center;
     margin-left: 12px;
     padding: 8px 29px;
     text-align: center;
@@ -1172,3 +1185,6 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 background-color: var(--accent-color);
     color: var(--white-text);
     cursor:pointer;}
+.span-subscribe {
+    display: flex;
+}
