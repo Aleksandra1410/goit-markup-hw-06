@@ -963,6 +963,8 @@ padding-bottom: 27px;
 }
 .modal-btn {
     position: absolute;
+    width: 30px;
+    height: 30px;
     top: 10px;
     right: 10px;
     border-radius: 50%;
@@ -1001,6 +1003,13 @@ padding-bottom: 27px;
     margin-right: auto;
     margin-left: auto;
     padding: 10px 56px;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    text-align: center;
+
     background-color: var(--accent-color);
     color: var(--white-text);
     cursor: pointer;  
@@ -1036,7 +1045,7 @@ transition: border-color 250ms var(--animation); }
 .label-field {
 display: flex;
 cursor: pointer;
-color: #757575;
+color: var(--color-text);
 margin-bottom: 4px;
 }
 .input-field {
@@ -1045,10 +1054,11 @@ margin-bottom: 4px;
     border: none;
     cursor: pointer;
 }
-.input-field:hover, :focus {
+.input-field:hover, :focus-within {
 border-color: #2196F3;
+fill: #2196F3;
 }
-.container-fieldmod:hover, :focus {
+.container-fieldmod:hover, :focus-within {
 border-color: #2196F3;
 }
 .input-field:hover + .modicon, 
@@ -1067,9 +1077,10 @@ border-color: #2196F3;
     width: 18px;
     height: 18px;
     transition: fill 250ms var(--animation);
+    fill: #212121;
 }
 
-.modicon:hover,:focus {
+.modicon:hover,:focus-within {
     fill: var(--accent-color);
 }
 
@@ -1126,7 +1137,7 @@ position: relative;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color: #757575;}
+    color: var(--color-text);}
 
 
 /* Module 6 elements of forms */
@@ -1163,6 +1174,7 @@ position: relative;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background: #2F303A;
+    color: var(--white-text);
 } 
 .icon-send {
     margin-left: 10px;
